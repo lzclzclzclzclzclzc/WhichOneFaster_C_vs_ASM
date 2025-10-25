@@ -71,8 +71,9 @@ void insertion_sort_asm(long *arr, int n) {
 }
 ```
 #### 流程图如下
-<img width="2240" height="1132" alt="流程图" src="https://github.com/user-attachments/assets/e30403d5-c9da-42e9-9c2e-a2fbad9c8d04" />
+<img width="2240" height="1132" alt="流程图" src="https://github.com/user-attachments/assets/e30403d5-c9da-42e9-9c2e-a2fbad9c8d04" />  
 其中左边为外层循环，中间为内层循环，右侧为插入过程。
+
 ### 2. 自动化脚本
 #### 代码如下
 ```sh
@@ -103,12 +104,16 @@ python Ocompare.py
 然而，有同组同学实验中出现了汇编实现比C程序更慢的情况。为进一步验证原因，我分别测试了在不同编译优化级别下的性能表现，结果如下：
 - **C 程序性能随优化等级变化情况：**
 <img width="2400" height="1800" alt="c_compare" src="https://github.com/user-attachments/assets/91a9919d-a495-49a7-b866-73ab523261e0" />
+
 - **汇编程序性能随优化等级变化情况：**
 <img width="2400" height="1800" alt="asm_compare" src="https://github.com/user-attachments/assets/de23a5f4-88d3-4524-b462-029403a94eec" />
+
 由结果可看出，**高级别的编译优化对于汇编程序来说甚至起到了负面效果，而对于C程序来说性能提升幅度巨大。**
 
 此外，在O2优化级别下的比较结果如下：
+
 <img width="2400" height="1800" alt="compare_O2" src="https://github.com/user-attachments/assets/1ae93116-0b3d-4657-867a-d68062990cd2" />
+
 由上图可知，C 程序在经过 O2 优化后性能已明显超过汇编版本。
 
 编译器的编译优化是造成同学测试出C程序不如汇编的因素之一。
